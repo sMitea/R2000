@@ -7,12 +7,17 @@
         "start": "node index.js",
         "test": "node debug index.js"
     },
-    "author": "smitea",
+    "author": {
+        "email": "smitea@163.com",
+        "name": "smitea",
+        "url": "https://github.com/sMitea"
+    },
     "license": "ISC",
     "repository": {
         "type": "git",
         "url": "https://github.com/sMitea/R2000.git"
     },
+
     "dependencies": {
         "serialport": "^6.2.1"
     }
