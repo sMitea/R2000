@@ -1,0 +1,19 @@
+{
+    "name": "r2000",
+    "version": "1.0.0",
+    "description": "R2000 读写器操作API",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "node debug index.js"
+    },
+    "author": "smitea",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sMitea/R2000.git"
+    },
+    "dependencies": {
+        "serialport": "^6.2.1"
+    }
+}
