@@ -22,7 +22,7 @@ function CommandData() {
     /** @property {Number} responseCommand 响应指令位 */
     this.responseCommand = 0x00;
     /** @callback responseCallback */
-    this.responseCallback = function (data) {};
+    this.responseCallback = function (data) { };
 };
 
 /**
@@ -92,8 +92,12 @@ Driver.WAIT = 0xFE;
  */
 Driver.prototype.sendCommand = function (data) {
     if (this.isOpen) {
+        let _this = this;
         const TYPE = data.responseCommand;
-        const CALLBACK = data.responseCallback;
+        const CALLBACK = function (bytes) {
+            data.responseCallback(bytes);
+            _this.removeListener(Driver.EVENT + TYPE, data.responseCallback);
+        };
 
         // 设定CRC
         let command = data.command;

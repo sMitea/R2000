@@ -165,8 +165,6 @@ R2000.prototype.setAnts = function (ants) {
                     resolve(data[3] === 1);
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -212,8 +210,6 @@ R2000.prototype.getAnts = function () {
 
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -247,8 +243,6 @@ R2000.prototype.setPower = function (writePower = 30, readPower = 30, isLoop = t
                     resolve(data[3] === 1);
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -284,8 +278,6 @@ R2000.prototype.getPower = function () {
                     });
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -328,8 +320,6 @@ R2000.prototype.setGPIO = function (gpios = [false, false, false, false, false, 
                     resolve(data[3] === 1);
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -375,8 +365,6 @@ R2000.prototype.getGPIO = function () {
                     }
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -409,8 +397,6 @@ R2000.prototype.getHardwareVersion = function () {
                     resolve(version);
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -443,8 +429,6 @@ R2000.prototype.getFirmwareVersion = function () {
                     resolve(version);
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -478,8 +462,6 @@ R2000.prototype.getTag = function () {
                     resolve(epc);
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -555,8 +537,6 @@ R2000.prototype.getTagInfo = function (password, filterType, filterData, bankNo,
                     }
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -636,8 +616,6 @@ R2000.prototype.setTag = function (password, filterType, filterData, bankNo, sta
                     }
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -671,8 +649,6 @@ R2000.prototype.setBaute = function (baute) {
                     resolve(data[3] === 1);
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -706,8 +682,6 @@ R2000.prototype.setAutoRead = function (isAuto) {
                     resolve(data[3] === 1);
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -742,8 +716,6 @@ R2000.prototype.setHeartbeat = function (heartBeat = 10) {
                     resolve(data[3] === 1);
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
@@ -781,8 +753,6 @@ R2000.prototype.getHeartbeat = function () {
                     }
                 } catch (error) {
                     reject(error);
-                } finally {
-                    _this.driver.removeListener(Driver.EVENT + _data.responseCommand, _data.responseCallback);
                 }
             }
         };
